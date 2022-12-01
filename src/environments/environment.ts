@@ -10,12 +10,13 @@ export const environment = {
   API_URL:"https://api.openweathermap.org/data/2.5/",
 
   firebase: {
-  apiKey: "AIzaSyBvnyvwZKDBsYVt4g1c5VqBSrZT7-kwuuk",
-  authDomain: "tellevo-ortiz-m.firebaseapp.com",
-  projectId: "tellevo-ortiz-m",
-  storageBucket: "tellevo-ortiz-m.appspot.com",
-  messagingSenderId: "978654870759",
-  appId: "1:978654870759:web:e22c6ec9e8fac189887642",
+    apiKey: "AIzaSyDnlUpnILRyIPW4g8q2wqgANGw7twV8KO8",   
+    authDomain: "proyectoapp-28bb2.firebaseapp.com",   
+    projectId: "proyectoapp-28bb2",   
+    storageBucket: "proyectoapp-28bb2.appspot.com",   
+    messagingSenderId: "1019149935467",   
+    appId: "1:1019149935467:web:ea63427f71b7512455222e",   
+    measurementId: "G-XK014Y9TD7"
 },
  
 };

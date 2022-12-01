@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Cambio de Moneda</ion-title>
+    <img src="../../../assets/img/coche.png" alt="Logo" slot="end" class="logo">
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+  <h5>Dolar y Euro Hoy</h5>
+  <ion-list>
+      <ion-item >
+          <ion-label>1 {{Dolar?.codigo}} = {{Dolar?.valor}}</ion-label> 
+      </ion-item>
+      <ion-item>
+          <ion-label>1 {{Euro?.codigo}} = {{Euro?.valor}}</ion-label> 
+      </ion-item>
+
+     
+  </ion-list>
+  <h5>Convertir pesos Chilenos</h5>    
+  <ion-item counter="true">
+      <ion-label  position="floating">Pesos Chilenos</ion-label>
+      <ion-input type="number" [(ngModel)] = "CLP"  maxlength="20"></ion-input>
+  </ion-item> 
+  <div class="cajaBotones">
+      <ion-button id="bto_dolar" (click)="ConvertirDolar()">Dolar</ion-button>
+      <ion-button id="bto_euro" (click)="ConvertirEuro()">Euro</ion-button>
+      <ion-button (click)="limpiarCampo()" >Limpiar</ion-button>
+  </div>
+  <h5>Conversión:</h5>
+  <ion-item>
+      <ion-label>{{conversion}}</ion-label> 
+  </ion-item>
+
+
+
+</ion-content>
+

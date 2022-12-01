@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Mi Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]= "true">
+  <div class="avatar">
+    <ion-avatar (click)="uploadAvatar()">
+      <img *ngIf="profile?.imageUrl; else placeholder_avatar;" [src]="profile.imageUrl" class="img">
+      <ng-template #placeholder_avatar>
+        <div class="no-avatar">
+          <img src="/assets/img/perfil.png" alt="">
+        </div>
+      </ng-template>
+    </ion-avatar>
+  </div>
+  <h6> <center>Foto de perfil</center></h6>
+
+</ion-content>

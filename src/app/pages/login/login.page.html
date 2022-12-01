@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+    <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title class="ion-text-center">Login</ion-title>
+      <img src="../../../assets/img/coche.png" alt="Logo" slot="end" class="logo">
+    </ion-toolbar>
+  </ion-header>
+  
+ 
+  
+  <ion-content>
+    <form [formGroup]="credentials" (ngSubmit)="login()">
+  
+      <ion-item class="ion-margin-bottom">
+        <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
+        <ion-note slot="error" *ngIf="(email?.dirty || email?.touched) && email?.errors">Email no válido</ion-note>
+      </ion-item>
+  
+      <ion-item class="ion-margin-bottom">
+        <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+        <ion-note slot="error" *ngIf="(password?.dirty || password?.touched) && password?.errors">Password debe tener al menos 3 carácteres</ion-note>
+      </ion-item>
+  
+      <ion-button expand="full" type="submit" [disabled]="!credentials.valid">Login</ion-button>
+      <ion-button expand="full" type="button" (click)="register()">Registrarse</ion-button>
+      
+  
+    </form>
+  </ion-content>

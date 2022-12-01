@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title slot="start">¡Ups!</ion-title>
+    <img src="../../../assets/img/coche.png" alt="Logo" slot="end" class="logo">
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title color="danger">Página no encontrada...</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      ¡Pagina no encontrada, intentalo de nuevo!
+    </ion-card-content>
+
+    <ion-item class="ion-activated" [routerLink]="['/casa']"  color="danger">
+      <ion-icon name="arrow-undo-outline" ></ion-icon>
+    </ion-item>
+
+  </ion-card>
+  
+</ion-content>
